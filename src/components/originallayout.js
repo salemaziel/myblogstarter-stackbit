@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Header2 from "./header"
 import NavbarGlobal from "./navbar"
 import { rhythm, scale } from "../utils/typography"
+import Footer from "./footer"
 
 class Layout2 extends React.Component {
   render() {
@@ -31,8 +32,8 @@ class Layout2 extends React.Component {
           </Link>
         </h1>
       )
-    } {/**else {
-      {/**header = (
+    } else {
+      header = (
         <h3
           style={{
             fontFamily: `Montserrat, sans-serif`,
@@ -51,7 +52,7 @@ class Layout2 extends React.Component {
           </Link>
         </h3>
       )
-    }**/}
+    }
     return (
       <div
         style={{
@@ -61,15 +62,11 @@ class Layout2 extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <Header2 />
-        <NavbarGlobal />
+        <Header2>
         <header>{header}</header>
+        </Header2>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     )
   }
