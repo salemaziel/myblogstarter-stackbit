@@ -6,10 +6,12 @@ import { faPhoneAlt, faEnvelope, faSearch } from '@fortawesome/free-solid-svg-ic
 /** import '../css/main.css' **/
 import '../css/header.css'
 import '../../src/components/layout.css'
+import NavbarGlobal from "./navbar"
 
 
 const Header = () => (
-  <section className="cx_top_bar">
+  <section NavbarGlobal>
+  <div className="cx_top_bar">
     <div className="container">
       <div className="row">
         <div className="col-md-12">
@@ -23,6 +25,8 @@ const Header = () => (
         </div>
       </div> 
     </div>  
+  </div>
+  <NavbarGlobal />
   </section>
 )
 

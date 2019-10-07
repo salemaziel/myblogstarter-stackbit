@@ -1,9 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Header2 from "./header"
+import NavbarGlobal from "./navbar"
 import { rhythm, scale } from "../utils/typography"
+import Footer from "./footer"
 
-class Layout extends React.Component {
+class Layout2 extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -60,16 +62,14 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        <Header2>
         <header>{header}</header>
+        </Header2>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     )
   }
 }
 
-export default Layout
+export default Layout2
