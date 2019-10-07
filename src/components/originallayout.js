@@ -1,9 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Header2 from "./header"
+import NavbarGlobal from "./navbar"
 import { rhythm, scale } from "../utils/typography"
 
-class Layout extends React.Component {
+class Layout2 extends React.Component {
   render() {
     const { location, title, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
@@ -30,8 +31,8 @@ class Layout extends React.Component {
           </Link>
         </h1>
       )
-    } else {
-      header = (
+    } {/**else {
+      {/**header = (
         <h3
           style={{
             fontFamily: `Montserrat, sans-serif`,
@@ -50,7 +51,7 @@ class Layout extends React.Component {
           </Link>
         </h3>
       )
-    }
+    }**/}
     return (
       <div
         style={{
@@ -60,6 +61,8 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
+        <Header2 />
+        <NavbarGlobal />
         <header>{header}</header>
         <main>{children}</main>
         <footer>
@@ -72,4 +75,4 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout
+export default Layout2
